@@ -1,0 +1,166 @@
+SQL> CONN
+Enter user-name: TRAVEL
+Enter password:123
+Connected.
+
+SQL> create table account(username varchar(30), name varchar(40), password varchar(30), question varchar(100), answer varchar(50));
+
+Table created.
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> create table customer(username varchar(30), id_type varchar(20), number1 varchar(20), name varchar(30), gender varchar(15), country varchar(20), address varchar(50), phone varchar(20), email varchar(40));
+
+Table created.
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> create table hotels(name varchar(30), cost_per_day varchar(20), food_charges varchar(20), ac_charges varchar(20));
+
+Table created.
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> insert into hotels values('JW Marriott Hotel', '2000', '2500', '3000');
+
+1 row created.
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> insert into hotels values('Four Seasons Hotel', '1200', '1900', '2200');
+
+1 row created.
+
+SQL> create table bookHotel(username varchar(30), name varchar(30), persons varchar(20), days varchar(20), ac varchar(10), food varchar(10), id varchar(30), number1 varchar(20), phone varchar(20), cost varchar(20));
+
+Table created.
+
+
+
+SQL> create table bookPackage(username varchar(30), package varchar(40), persons varchar(20), id varchar(30), number1 va
+rchar(20), phone varchar(20), price varchar(20));
+
+Table created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> INSERT INTO account Values('manish', 'manish maharana', '1234', 'Your Lucky Number?', '1');
+
+1 row created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> select*from account;
+
+USERNAME                       NAME
+------------------------------ ----------------------------------------
+PASSWORD
+------------------------------
+QUESTION
+--------------------------------------------------------------------------------
+ANSWER
+--------------------------------------------------
+manish                         manish maharana
+1234
+Your Lucky Number?
+1
+
+
+SQL> select*from bookhotel;
+
+USERNAME                       NAME
+------------------------------ ------------------------------
+PERSONS              DAYS                 AC         FOOD
+-------------------- -------------------- ---------- ----------
+ID                             NUMBER1              PHONE
+------------------------------ -------------------- --------------------
+COST
+--------------------
+                               Four Seasons Hotel
+4                    8                    AC         Yes
+
+Rs 169600
+
+
+SQL> select*from customer;
+
+USERNAME                       ID_TYPE              NUMBER1
+------------------------------ -------------------- --------------------
+NAME                           GENDER          COUNTRY
+------------------------------ --------------- --------------------
+ADDRESS                                            PHONE
+-------------------------------------------------- --------------------
+EMAIL
+----------------------------------------
+manish                         Aadhar Card          336227660685
+manish mharana                 Male            india
+hyderabad                                          7205294038
+maharanam@gmail.com
+
+
+SQL> SELECT*FROM TAB;
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ACCOUNT
+TABLE
+
+CUSTOMER
+TABLE
+
+HOTELS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+BOOKHOTEL
+TABLE
+
+BOOKPACKAGE
+TABLE
+
+
+SQL> SELECT*FROM ACCOUNT;
+
+USERNAME                       NAME
+------------------------------ ----------------------------------------
+PASSWORD
+------------------------------
+QUESTION
+--------------------------------------------------------------------------------
+ANSWER
+--------------------------------------------------
+manish                         manish maharana
+1234
+Your Lucky Number?
+1
+
+
+SQL> SELECT*FROM HOTELS;
+
+NAME                           COST_PER_DAY         FOOD_CHARGES
+------------------------------ -------------------- --------------------
+AC_CHARGES
+--------------------
+JW Marriott Hotel              2000                 2500
+3000
+
+Four Seasons Hotel             1200                 1900
+2200
